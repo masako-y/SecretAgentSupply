@@ -59,7 +59,7 @@ h1, h4 {
 
 .headline h1 {
   font-size: 2rem;
-  margin: 0.25rem 0;
+  margin-top: 0.25rem;
 }
 
 /* nav section */
@@ -156,6 +156,9 @@ footer {
   .product {
     width: 47%;
   }
+  .info {
+    width: 37%;
+  }
 }
 
 @media only screen and (max-width: 470px) {
@@ -166,12 +169,29 @@ footer {
     position: relative;
     top: 10rem;
     padding: 1rem 2rem;
+    width: 100%;
   }
   .headline h1 {
     font-size: 1rem;
   }
-  .headline h2 {
+  .headline h4 {
     font-size: 0.77rem;
   }
-  
+  .product.watch {
+    display: none;
+  }
+  .product {
+    width: 90%;
+    margin: auto;
+  }
+  .business-info {
+    flex-wrap: wrap;
+  }
+  .info {
+    margin: 0.5rem auto;
+    width: 90%;
+  }
+  footer {
+    text-align: center;
+  }
 }
