@@ -48,6 +48,13 @@ h1, h4 {
   padding: 2rem 3rem;
   position: relative;
   top: 9rem;
+  animation-name: test;
+  animation-duration: 4s;
+}
+/* Standard syntax */
+@keyframes test {
+  from {background-color: black;}
+  to {background-color: firebrick;}
 }
 
 .headline h1 {
@@ -65,16 +72,21 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0.75rem 0;
   list-style: none;
 }
 
-.products
-.business-info {
+.mobile-nav {
+  display: none;
+}
+
+/* products and business info section */
+
+.products, .business-info {
   display: flex;
   justify-content: space-between;
-  margin: 3rem o;
+  margin-top: 3rem;
 }
 
 .product {
@@ -95,8 +107,71 @@ nav ul {
 }
 
 .description {
+  display: block;
   background-color: black;
   color: white;
-  text-align: cener;
-  padding: .5rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.info {
+  width: 35%;
+  margin-bottom: 4rem;
+}
+
+.info .title {
+  display: block;
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+
+/* footer */
+
+footer {
+  padding: 5rem 0;
+  margin-top: 4rem;
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+   .headline h1 {
+     font-size: 1.5rem;
+   }
+   .headline h4 {
+     font-size: 1.2rem;
+   }
+   nav ul {
+     display: none;
+   }
+   .mobile-nav {
+     display: block;
+     text-align: center;
+   }
+  .product.glasses {
+    display: none;
+  }
+  .product {
+    width: 47%;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .main-banner {
+    height: 15rem;
+  }
+  .headline {
+    position: relative;
+    top: 10rem;
+    padding: 1rem 2rem;
+  }
+  .headline h1 {
+    font-size: 1rem;
+  }
+  .headline h2 {
+    font-size: 0.77rem;
+  }
+  
 }
